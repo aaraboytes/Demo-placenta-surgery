@@ -11,8 +11,7 @@ public class FocusMovement : MonoBehaviour
     }
     private void Update()
     {
-        Vector2 mousePos = Input.mousePosition;
-        Vector2 newPos = camera.ScreenToWorldPoint(mousePos);
+        Vector2 newPos = camera.ScreenToWorldPoint(new Vector2(Screen.width / 2,Screen.height/2));
         transform.position = newPos;
     }
 }
